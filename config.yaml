@@ -1,0 +1,30 @@
+# Everything you are likely to tune lives here.
+llm:
+  provider: openai_compat          # openai_compat | mock
+  base_url: https://api.groq.com/openai/v1   # any OpenAI-compatible endpoint (Gemini, LiteLLM proxy, Ollama...)
+  model: llama-3.3-70b-versatile
+  api_key_env: LLM_API_KEY         # name of the env var holding your key (never put keys in this file)
+  temperature: 0.2
+  retries: 3
+  timeout_s: 120
+
+paths:
+  data_dir: data
+  outputs_dir: outputs
+
+pipeline:
+  candidates_per_episode: 3
+  max_retries: 2                   # regeneration attempts when all candidates fail validation
+  include_camera_in_prompt: true   # camera lines help hooks ("slap") but cost tokens
+  run_cold_viewer: true
+
+validation:
+  min_duration_s: 20
+  max_duration_s: 60
+  first_beat_max_s: 3.0
+  max_segments: 4
+  snap_end: last_spoken            # last_spoken | last_event
+  end_pad_s: 0.3
+
+ranking:
+  weights: {hook: 0.35, cliffhanger: 0.35, standalone: 0.30}
