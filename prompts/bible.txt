@@ -1,0 +1,5 @@
+TODO (yours): write the show-bible prompt.
+Inputs available: {{episodes}} = every episode's logline + continuity notes.
+Return JSON: {"premise": str, "characters": [{"name":..,"description":..}], "aliases": {"Alias": "Canonical Name"}}
+
+{{episodes}}

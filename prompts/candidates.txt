@@ -1,0 +1,13 @@
+TODO (yours): define what a good promo is and how many candidates you want.
+Variables: {{bible}} {{episode}} {{n_candidates}} {{feedback}} (empty on first try; validator errors on retry)
+The code expects JSON in this shape (edit candidates.py parse if you change it):
+{"candidates":[{"segments":[[start_id,end_id]], "hook_event":id, "cliffhanger_event":id,
+                "hook":"...", "cliffhanger":"...", "why":"..."}]}
+Segments are event IDs, NEVER timestamps. A 3-number segment [ep,start_id,end_id] is allowed for stitching.
+
+SHOW BIBLE:
+{{bible}}
+
+{{episode}}
+
+{{feedback}}

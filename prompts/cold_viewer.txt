@@ -1,0 +1,4 @@
+TODO (yours): the cold-viewer test. This call must NOT see the bible. Variable: {{clip}}
+Expected JSON: {"characters":"","conflict":"","next":"","can_answer":true|false}
+
+{{clip}}

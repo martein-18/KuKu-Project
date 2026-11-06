@@ -1,0 +1,6 @@
+TODO (yours): rubric for hook / cliffhanger / standalone (1-5) + hook_type tag.
+Variables: {{bible}} {{clip}} {{hook}} {{cliffhanger}}
+Expected JSON: {"hook":{"score":1-5,"reason":""},"cliffhanger":{"score":1-5,"reason":""},
+                "standalone":{"score":1-5,"reason":""},"hook_type":"slap|reveal|threat|betrayal|confession|other"}
+
+{{clip}}
